@@ -98,7 +98,7 @@ class WeixinMP(object):
         token and params.setdefault("access_token", self.access_token)
         headers = {}
         if json_encode:
-            data = json.dumps(data, ensure_ascii=False)
+            data = json.dumps(data, ensure_ascii=False).encode("utf-8")
             # data = json.dumps(data)
             headers["Content-Type"] = "application/json;charset=UTF-8"
         # print url, params, headers, data
