@@ -8,7 +8,7 @@ import hashlib
 
 from datetime import datetime
 
-from .base import WeixinError
+from .base import WeixinError, basestring
 
 try:
     from flask import request, Response
@@ -26,7 +26,6 @@ except ImportError:
     from xml.etree import cElementTree as etree
 except ImportError:
     from xml.etree import ElementTree as etree
-
 
 __all__ = ("WeixinMsgError", "WeixinMsg")
 
